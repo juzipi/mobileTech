@@ -1026,3 +1026,14 @@ iscroll的闪动问题也与渲染有关系，可以参考
 	    navigator.contacts.find(fields, onSuccess, onError,options);  
 	    }
 
+
+#在一些坑	    
+##transform
+transform的时候,加上类似translateZ(0px),有助于开启硬件加速
+##overflow-y
+ 在用 overflow-y: auto 来实现滚动的时候，ios 下会出现滚动卡顿的情况，android 一切正常。 解决办法： -webkit-overflow-scrolling: touch
+ios 下使用 overflow: hidden 会失效，解决办法：添加 position: relative
+##placeholder--line-heigh
+input 的placeholder会出现文本位置偏上的情况：PC端设置line-height等于height能够对齐，而移动端仍然是偏上，解决是设置line-height：normal，（stackoverflow也可查到这种解决办法）。
+##高亮背景
+Android原生浏览器会点击链接会出现高亮背景的情况，去除：-webkit-tap-highlight-color:rgba(0,0,0); 在Android的高级版本中可能还会出现黄色边框，去除：outline:none;
