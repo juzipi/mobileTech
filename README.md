@@ -7,6 +7,7 @@ A useful tools or tips list for mobile web application developing
 
 
 一些非常重要的工具类网站
+[制作load]:http://cssload.net/
 
  [html5与css3技术应用评估](http://html5please.com/ "html5与css3技术应用评估")
  
